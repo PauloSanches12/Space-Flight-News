@@ -24,7 +24,7 @@ const schemasData = new Schema<Data>({
     events: [eventsModel]
 });
 
-model<Data>('BaseData', schemasData);
+export default model<Data>('BaseData', schemasData);
 
 export async function run(): Promise<void> {
 
