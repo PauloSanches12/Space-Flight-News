@@ -1,16 +1,15 @@
 import BaseData from '../models/DataSpaceFlight';
 import { Request, Response } from "express";
 import { Data } from '../@types/Data';
-import api from '../api/api';
 
 export async function index(request: Request, response: Response) {
     return response.status(200).send("Back-end Challenge 2021 🏅 - Space Flight News")
 }
 
-export function indexAll(request: Request, response: Response){
-    api.get("/articles").then(resp => {
-        return response.status(200).json(resp.data)
-    })
+export async function indexAll(request: Request, response: Response){
+    const allArticle = await BaseData.find();
+
+    return response.status(200).json(allArticle)
 }
 
 export async function store(request: Request, response: Response): Promise<Response> {
