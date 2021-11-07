@@ -94,3 +94,17 @@ export async function update(request: Request, response: Response) {
 
     return response.status(200).json(idArticleUpdate);
 }
+
+export async function remove(request: Request, response: Response) {
+    const { id } = request.params;
+
+    const idConvert = Number(id);
+
+    const { deletedCount } = await BaseData.deleteOne({ id: idConvert });
+
+    if (deletedCount === 0) {
+        return response.status(404).json({ message: "article not found!" });
+    }
+    
+    return response.status(200).json({ message: "article deleted!" });
+}
