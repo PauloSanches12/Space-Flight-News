@@ -72,10 +72,8 @@ export async function update(request: Request, response: Response) {
         launches,
         events
      } = request.body;
-
      
-
-    const idArticleUpdate = await BaseData.findOneAndUpdate({ id: idConvert }, {
+    const articleUpdate = await BaseData.findOneAndUpdate({ id: idConvert }, {
         featured,
         title,
         url,
@@ -83,16 +81,15 @@ export async function update(request: Request, response: Response) {
         newsSite,
         summary,
         publishedAt,
-        // launches: [{launches}],
-        // events: [{events}]
+        launches: [{
+            provider: launches[0].provider
+        }],
+        events: [{
+            provider: events[0].provider
+        }]
     });
 
-
-    // if (idArticleUpdate) {
-    //     response.status(404).json({ message: "article not found!" });
-    // }
-
-    return response.status(200).json(idArticleUpdate);
+    return response.status(201).json(articleUpdate);
 }
 
 export async function remove(request: Request, response: Response) {
