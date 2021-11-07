@@ -43,7 +43,7 @@ export async function store(request: Request, response: Response): Promise<Respo
     return response.status(201).json(data)
 }
 
-export async function showByUser(request: Request, response: Response): Promise<Response> {
+export async function show(request: Request, response: Response): Promise<Response> {
     const { id } = request.params;
     
     const idConvert = Number(id);
@@ -55,4 +55,43 @@ export async function showByUser(request: Request, response: Response): Promise<
     }
 
     return response.status(200).json(idArticle);
+}
+
+export async function update(request: Request, response: Response) {
+    const { id } = request.params;
+
+    const idConvert = Number(id);
+
+    const { 
+        featured,
+        title,
+        url,
+        imageUrl,
+        newsSite,
+        summary,
+        publishedAt,
+        launches,
+        events
+     } = request.body;
+
+     
+
+    const idArticleUpdate = await BaseData.findOneAndUpdate({ id: idConvert }, {
+        featured,
+        title,
+        url,
+        imageUrl,
+        newsSite,
+        summary,
+        publishedAt,
+        // launches: [{launches}],
+        // events: [{events}]
+    });
+
+
+    // if (idArticleUpdate) {
+    //     response.status(404).json({ message: "article not found!" });
+    // }
+
+    return response.status(200).json(idArticleUpdate);
 }

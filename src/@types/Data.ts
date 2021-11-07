@@ -1,10 +1,10 @@
 interface LaunchesModel {
-    id: string;
+    // id: string;
     provider: string;
 }
 
 interface EventsModel {
-    id: string;
+    // id: string;
     provider: string;
 }
 
