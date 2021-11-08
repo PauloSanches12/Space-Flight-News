@@ -2,12 +2,10 @@ import  { connect, model, Schema } from 'mongoose';
 import { Data, LaunchesModel, EventsModel } from '../@types/Data';
 
 const launchesModel = new Schema<LaunchesModel>({
-    // id: { type: String, unique: true },
     provider: { type: String }
 });
 
 const eventsModel = new Schema<EventsModel>({
-    // id: { type: String, unique: true },
     provider: { type: String }
 });
 

@@ -1,4 +1,4 @@
-import express, { json, Request, Response } from 'express';
+import express, { json } from 'express';
 import { run } from './models/DataSpaceFlight';
 import { routes } from './routes';
 import cors from 'cors';
