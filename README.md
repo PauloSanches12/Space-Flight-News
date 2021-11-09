@@ -31,7 +31,7 @@ O **Space Flight News API** é uma API que disponibiliza para outras aplicaçõe
 Realize um `clone` do repositório para a sua maquina local.
 
 ```bash
-git clone main <fork-link>
+git clone <fork-link>
 ```
 
 ### 2º Passo
