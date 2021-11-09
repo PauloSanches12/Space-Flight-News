@@ -63,4 +63,6 @@ localhost:3333
 - `[PUT]/articles/{id}:` Atualizar um artigo baseado no `id`
 - `[DELETE]/articles/{id}:` Remover um artigo baseado no `id`
 
+Link da apresentação https://www.loom.com/share/e477ee5955174e5db8fdaca003ab59be
+
 ### challenge by coodesh 
