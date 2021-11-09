@@ -31,7 +31,7 @@ O **Space Flight News API** é uma API que disponibiliza para outras aplicaçõe
 Realize um `clone` do repositório para a sua maquina local.
 
 ```bash
-git clone main <fork-link>
+git clone <fork-link>
 ```
 
 ### 2º Passo
@@ -40,12 +40,20 @@ na pasta do projeto, instale as dependências necessárias.
 ```bash
 yarn install
 ```
+ou
+```bash
+npm intall
+```
 
 ### 3º Passo
 
 rode o projeto com o comando.
 ```bash
 yarn dev
+```
+ou
+```bash
+npm run dev
 ```
 ### 4º Passo
 acesse seu local na porta 3333.
@@ -62,5 +70,7 @@ localhost:3333
 - `[POST]/articles/:` Adicionar um novo artigo
 - `[PUT]/articles/{id}:` Atualizar um artigo baseado no `id`
 - `[DELETE]/articles/{id}:` Remover um artigo baseado no `id`
+
+Link da apresentação https://www.loom.com/share/e477ee5955174e5db8fdaca003ab59be
 
 ### challenge by coodesh 
