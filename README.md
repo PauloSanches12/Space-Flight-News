@@ -40,12 +40,20 @@ na pasta do projeto, instale as dependências necessárias.
 ```bash
 yarn install
 ```
+ou
+```bash
+npm intall
+```
 
 ### 3º Passo
 
 rode o projeto com o comando.
 ```bash
 yarn dev
+```
+ou
+```bash
+npm run dev
 ```
 ### 4º Passo
 acesse seu local na porta 3333.
